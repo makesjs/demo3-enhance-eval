@@ -1,8 +1,5 @@
-
-global.escapeHTML = require('escape-html');
-//
-
-module.exports = async function() {
+export default async function() {
+  global.escapeHTML = (await import('escape-html')).default;
   console.log(`
 ==================================================================
 This demo shows how to inject a function as Nodejs global variable
